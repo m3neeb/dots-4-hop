@@ -1,0 +1,8 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=ChatGPT
+Exec=xdg-open https://chat.openai.com/
+Terminal=false
+Icon=/home/aeon/.local/share/icons/gpt.png
+Categories=Network;WebBrowser;

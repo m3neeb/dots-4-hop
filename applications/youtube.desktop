@@ -1,0 +1,8 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=YouTube
+Exec=xdg-open https://www.youtube.com
+Terminal=false
+Icon=youtube
+Categories=Network;WebBrowser;

@@ -1,0 +1,8 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Mojza
+Exec=xdg-open https://www.mojza.org/
+Terminal=false
+Icon=/home/aeon/.local/share/icons/mojza.png
+Categories=Network;WebBrowser;

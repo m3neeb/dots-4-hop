@@ -1,0 +1,8 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=WhatsApp
+Exec=xdg-open https://web.whatsapp.com/
+Terminal=false
+Icon=whatsapp
+Categories=Network;WebBrowser;

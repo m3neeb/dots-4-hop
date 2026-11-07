@@ -1,0 +1,772 @@
+config_version = 16
+
+[bar]
+order = [ "Bar", "bar_2", "bar" ]
+
+    [bar.Bar]
+    border = "primary"
+    center = [ "clock", "seperator", "date", "widget" ]
+    concave_edge_corners = false
+    enabled = false
+    end = [
+        "wallpaper",
+        "bar_3",
+        "seperator",
+        "battery",
+        "seperator",
+        "volume",
+        "seperator",
+        "input_volume",
+        "seperator",
+        "brightness",
+        "seperator",
+        "network"
+    ]
+    font_scale = 1.1999999806284904
+    hover_highlight = false
+    margin_ends = 0
+    panel_overlap = 0
+    radius = 0
+    scale = 0.90000000596046448
+    shadow = false
+    start = [ "workspacer", "workspacer1-5", "bar_4", "workspacer2", "spacer_3", "toggle" ]
+    thickness = 25
+
+    [bar.bar]
+    border = "primary"
+    center = [ "text_2" ]
+    end = []
+    hover_highlight = false
+    margin_ends = 0
+    padding = 0
+    panel_overlap = 0
+    position = "bottom"
+    radius = 0
+    shadow = false
+    start = []
+    thickness = 10
+
+    [bar.bar_2]
+    center = []
+    enabled = true
+    end = [
+        "wallpaper",
+        "bar_6",
+        "seperator",
+        "network",
+        "seperator",
+        "brightness",
+        "seperator",
+        "input_volume",
+        "seperator",
+        "volume",
+        "seperator",
+        "battery",
+        "seperator",
+        "clock",
+        "slash",
+        "date",
+        "seperator",
+        "workspacer",
+        "workspacer1-5",
+        "bar_5",
+        "workspacer2"
+    ]
+    font_scale = 1.0999999828636646
+    hover_highlight = false
+    margin_ends = 0
+    position = "bottom"
+    radius = 0
+    radius_bottom_right = 0
+    shadow = false
+    start = [ "launcher", "group:g1", "taskbar", "tray" ]
+    thickness = 40
+
+        [[bar.bar_2.capsule_group]]
+        accordion = false
+        accordion_direction = "end"
+        border_width = 1.0
+        enabled = true
+        fill = "on_surface"
+        foreground = "surface"
+        id = "g1"
+        members = [ "Search", "weather" ]
+        opacity = 1.0
+        padding = 6.0
+        radius = 0.0
+
+[control_center]
+circular_avatar = false
+show_shortcut_labels = false
+width = 800
+
+    [[control_center.shortcuts]]
+    type = "clipboard"
+
+    [[control_center.shortcuts]]
+    type = "nightlight"
+
+    [[control_center.shortcuts]]
+    type = "notification"
+
+    [[control_center.shortcuts]]
+    type = "power_profile"
+
+[desktop_widgets]
+schema_version = 2
+widget_order = [
+    "desktop-widget-0000000000000006",
+    "desktop-widget-0000000000000005",
+    "desktop-widget-0000000000000004",
+    "desktop-widget-0000000000000001",
+    "desktop-widget-0000000000000002",
+    "desktop-widget-0000000000000003"
+]
+
+    [desktop_widgets.grid]
+    cell_size = 8
+    major_interval = 4
+    visible = true
+
+    [desktop_widgets.widget.desktop-widget-0000000000000001]
+    box_height = 304.0
+    box_width = 320.0
+    cx = 176.0
+    cy = 676.0
+    output = "eDP-1"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "calendar"
+
+        [desktop_widgets.widget.desktop-widget-0000000000000001.settings]
+        background = true
+        background_opacity = 1.0
+        background_padding = 10
+        background_radius = 0
+        show_events = false
+        show_events_location = false
+        show_week_numbers = true
+
+    [desktop_widgets.widget.desktop-widget-0000000000000002]
+    box_height = 320.0
+    box_width = 224.0
+    cx = 1792.0
+    cy = 556.0
+    output = "eDP-1"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "media_player"
+
+        [desktop_widgets.widget.desktop-widget-0000000000000002.settings]
+        album_art_background = false
+        album_art_blur = 96
+        audio_visualizer = true
+        background_opacity = 1.0
+        background_radius = 0
+        hide_when_no_media = false
+        layout = "vertical"
+
+    [desktop_widgets.widget.desktop-widget-0000000000000003]
+    box_height = 232.0
+    box_width = 320.0
+    cx = 176.0
+    cy = 384.0
+    output = "eDP-1"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "weather"
+
+        [desktop_widgets.widget.desktop-widget-0000000000000003.settings]
+        background_opacity = 1.0
+        background_radius = 0
+        forecast_days = 6
+        show_forecast = true
+
+    [desktop_widgets.widget.desktop-widget-0000000000000004]
+    box_height = 216.0
+    box_width = 320.0
+    cx = 176.0
+    cy = 400.0
+    output = "eDP-1"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "weather"
+
+        [desktop_widgets.widget.desktop-widget-0000000000000004.settings]
+        background_color = "shadow"
+        background_opacity = 0.75
+        background_radius = 0
+        color = "surface"
+        forecast_days = 6
+        show_forecast = true
+
+    [desktop_widgets.widget.desktop-widget-0000000000000005]
+    box_height = 296.0
+    box_width = 320.0
+    cx = 176.0
+    cy = 688.0
+    output = "eDP-1"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "calendar"
+
+        [desktop_widgets.widget.desktop-widget-0000000000000005.settings]
+        background = true
+        background_color = "shadow"
+        background_opacity = 0.75
+        background_padding = 10
+        background_radius = 0
+        show_events = false
+        show_events_location = false
+        show_week_numbers = true
+
+    [desktop_widgets.widget.desktop-widget-0000000000000006]
+    box_height = 320.0
+    box_width = 224.0
+    cx = 1792.0
+    cy = 564.0
+    output = "eDP-1"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "media_player"
+
+        [desktop_widgets.widget.desktop-widget-0000000000000006.settings]
+        album_art_background = false
+        album_art_blur = 96
+        audio_visualizer = true
+        background_color = "shadow"
+        background_opacity = 0.75
+        background_radius = 0
+        hide_when_no_media = false
+        layout = "vertical"
+
+[dock]
+background_opacity = 0.99999997764825821
+border = "primary"
+border_width = 1.0
+cross_axis_padding = 6
+icon_size = 38
+inactive_opacity = 0.99999997764825821
+inactive_scale = 1.0
+item_spacing = 9
+launcher_custom_image_colorize = true
+launcher_position = "start"
+main_axis_padding = 2
+margin_edge = 8
+pinned = [
+    "floorp",
+    "thunar",
+    "com.mitchellh.ghostty",
+    "youtube",
+    "google-drive",
+    "sonora",
+    "spotify",
+    "vesktop",
+    "whatsapp",
+    "dev.zed.Zed",
+    "dev.noctalia.Noctalia"
+]
+radius = 0
+reserve_space = false
+shadow = false
+show_dots = true
+smart_auto_hide = true
+
+[hooks]
+colors_changed = "python3 /home/aeon/.local/bin/sonder-stats-server.py"
+wallpaper_changed = "noctalia msg plugin tordex/stdout:bar all update"
+
+[location]
+address = "Rawalpindiq"
+auto_locate = true
+
+[lockscreen_widgets]
+enabled = true
+schema_version = 2
+widget_order = [
+    "lockscreen-login-box@WL-1",
+    "lockscreen-login-box@winit",
+    "lockscreen-login-box@eDP-1",
+    "lockscreen-widget-0000000000000001",
+    "lockscreen-widget-0000000000000002"
+]
+
+    [lockscreen_widgets.grid]
+    cell_size = 16
+    major_interval = 4
+    visible = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@WL-1"]
+    box_height = 196.0
+    box_width = 720.0
+    cx = 639.9998779296875
+    cy = 591.52947998046875
+    output = "WL-1"
+    placement_height = 720.0
+    placement_width = 1280.0
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@WL-1".settings]
+        background_color = "surface_container"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_password_reveal = true
+        show_session_buttons = true
+        show_unlock_hint = true
+        show_weather = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@eDP-1"]
+    box_height = 70.0
+    box_width = 401.2578125
+    cx = 960.62890625
+    cy = 979.48046875
+    output = "eDP-1"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@eDP-1".settings]
+        background_color = "surface_container"
+        background_opacity = 0.0
+        background_radius = 0.0
+        center_password_text = true
+        input_opacity = 1.0
+        input_radius = 0.0
+        layout = "compact"
+        show_caps_lock = true
+        show_keyboard_layout = false
+        show_login_button = true
+        show_media = true
+        show_password_reveal = false
+        show_session_buttons = true
+        show_unlock_hint = false
+        show_weather = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@winit"]
+    box_height = 196.0
+    box_width = 810.0
+    cx = 949.99993896484375
+    cy = 838.0
+    output = "winit"
+    placement_height = 1020.0
+    placement_width = 1900.0
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@winit".settings]
+        background_color = "surface_container"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_password_reveal = true
+        show_session_buttons = true
+        show_unlock_hint = true
+        show_weather = true
+
+    [lockscreen_widgets.widget.lockscreen-widget-0000000000000001]
+    box_height = 480.0
+    box_width = 640.0
+    cx = 960.0
+    cy = 524.0
+    output = "eDP-1"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "clock"
+
+        [lockscreen_widgets.widget.lockscreen-widget-0000000000000001.settings]
+        background_opacity = 0.0
+        background_padding = 0
+        background_radius = 0
+        font_family = "Mojangles"
+
+    [lockscreen_widgets.widget.lockscreen-widget-0000000000000002]
+    box_height = 32.0
+    box_width = 368.0
+    cx = 959.0
+    cy = 940.0
+    output = "eDP-1"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "label"
+
+        [lockscreen_widgets.widget.lockscreen-widget-0000000000000002.settings]
+        background = false
+        title = "LOCKED"
+
+[osd.kinds]
+lock_keys = false
+
+[plugin_settings."avivbintangaringga/nix-monitor"]
+generation_check_interval = 100
+panel_card_color = "surface"
+system_stats_check_mode = "off"
+update_check_interval = 100
+update_command = "sudo nixos-rebuild switch --upgrade"
+
+[plugin_settings."m4sc/profile-switcher"]
+editor_placement = "attached"
+panel_placement = "attached"
+
+[plugin_settings."noctalia/mpvpaper"]
+video_directory = "/home/aeon/Videos/Live"
+
+[plugin_settings."theblackdon/theme-switcher"]
+carousel_placement = "attached"
+wallpaper-picker_placement = "attached"
+
+[plugins]
+enabled = [ "weinguyen/shell-command", "tordex/stdout" ]
+
+[shell]
+app_icon_color = "primary"
+avatar_path = "/home/aeon/Pictures/dino.jpg"
+button_borders = false
+card_borders = false
+corner_radius_scale = 0.0
+font_family = "Iosevka Nerd Font Propo"
+input_borders = false
+panel_anchor_bar = "bar"
+popup_borders = false
+popup_shadows = false
+show_close_buttons = false
+
+    [shell.launcher]
+    categories = false
+    category_icons_only = true
+    compact = true
+    default_view = "all"
+    sort_by_usage = false
+    width = 750
+
+    [shell.panel]
+    border_color = "primary"
+    border_width = 2.0
+    control_center_position = "top_center"
+    launcher_placement = "attached"
+    open_near_click_control_center = true
+    open_near_click_launcher = true
+    shadow = false
+
+    [shell.screenshot]
+    directory = "/home/aeon/Pictures/Screenshots"
+
+    [shell.session]
+    grid = true
+    grid_columns = 5
+
+        [[shell.session.actions]]
+        action = "lock"
+        countdown_seconds = 0.0
+        enabled = true
+        shortcut = "1"
+        variant = "default"
+
+        [[shell.session.actions]]
+        action = "logout"
+        command = "pkill -u aeon"
+        countdown_seconds = 0.0
+        enabled = true
+        shortcut = "2"
+        variant = "default"
+
+        [[shell.session.actions]]
+        action = "lock_and_suspend"
+        countdown_seconds = 0.0
+        enabled = true
+        shortcut = "3"
+        variant = "default"
+
+        [[shell.session.actions]]
+        action = "reboot"
+        countdown_seconds = 0.0
+        enabled = true
+        shortcut = "4"
+        variant = "default"
+
+        [[shell.session.actions]]
+        action = "shutdown"
+        countdown_seconds = 0.0
+        enabled = true
+        shortcut = "5"
+        variant = "destructive"
+
+    [shell.window_switcher]
+    show_caption = false
+
+[system.monitor]
+enabled = false
+
+[theme]
+community_palette = "ADW"
+custom_palette = "Zenate"
+mode = "dark"
+source = "community"
+wallpaper_scheme = "faithful"
+
+    [theme.templates]
+    builtin_ids = [ "btop", "gtk3", "gtk4", "ghostty", "kcolorscheme", "mango", "qt", "umbriel" ]
+    community_ids = [ "sonora", "pywalfox", "discord", "lazyvim", "neovim", "zed", "fastfetch", "papirus-icons", "lsd", "starship" ]
+
+[wallpaper]
+directory = "/home/aeon/Pictures/Wallpapers"
+transition = [ "diamond", "disc", "golden", "honeycomb", "melt", "pixel", "stripes", "vortex" ]
+
+    [wallpaper.automation]
+    recursive = true
+
+    [wallpaper.default]
+    path = "/home/aeon/Pictures/Wallpapers/Miscellaneous/wallhaven-zpypeg.jpg"
+
+    [wallpaper.last]
+    path = "/home/aeon/Pictures/Wallpapers/Miscellaneous/wallhaven-zpypeg.jpg"
+
+    [wallpaper.monitors.eDP-1]
+    path = "/home/aeon/Pictures/Wallpapers/Miscellaneous/wallhaven-zpypeg.jpg"
+
+[widget.Search]
+capsule = true
+capsule_fill = "on_hover"
+capsule_radius = 0
+color = "surface"
+text = " Search "
+type = "text"
+
+    [widget.Search.actions]
+    left = "exec noctalia msg panel-toggle launcher"
+
+[widget.Stats]
+glyph = "server-2"
+scale = 1.2
+type = "custom_button"
+
+    [widget.Stats.actions]
+    left = "exec ghostty -e htop"
+
+[widget.active_window]
+display = "text_only"
+icon_size = 8
+scale = 1.2
+show_empty_label = true
+
+[widget.audio_visualizer]
+bands = 12
+color_2 = "secondary"
+font_scale = 2.5
+scale = 2.5
+show_when_idle = true
+width = 100
+
+[widget.bar]
+scale = 1.2
+type = "eternalself-2328/undershell:bar"
+
+[widget.bar_2]
+scale = 1.2
+type = "noctalia/wallpaper_depth:bar"
+
+[widget.bar_3]
+cmd = "~/Documents/wallget.sh"
+interval = 59
+interval_units = "3600"
+show_glyph = false
+show_tooltip = false
+type = "tordex/stdout:bar"
+
+[widget.bar_4]
+capsule_radius = 0
+cmd = "umbriel workspaces --json | jq -r '[\"🟀\", \"🟄\", \"🟉\", \"🟋\", \"🟎\"][(first(.[] | select(.focused)) | .index) - 1] // empty'"
+color = "primary"
+interval = 59
+interval_units = "3600"
+show_glyph = false
+show_tooltip = false
+type = "tordex/stdout:bar"
+
+[widget.bar_5]
+cmd = "umbriel workspaces --json | jq -r '[\"🟀\", \"🟄\", \"🟉\", \"🟋\", \"🟎\"][(first(.[] | select(.focused)) | .index) - 1] // empty'"
+color = "tertiary"
+show_glyph = false
+show_tooltip = false
+type = "tordex/stdout:bar"
+
+[widget.bar_6]
+cmd = "~/Documents/wallget.sh"
+interval = 59
+interval_units = "3600"
+show_glyph = false
+show_tooltip = false
+type = "tordex/stdout:bar"
+
+[widget.battery]
+icon_color = "tertiary"
+
+[widget.brightness]
+icon_color = "tertiary"
+
+[widget.clock]
+color = "primary"
+
+[widget.control-center]
+capsule = true
+capsule_opacity = 0.5
+color = "primary"
+custom_image_colorize = true
+scale = 1.2
+
+[widget.date]
+color = "secondary"
+
+[widget.input_volume]
+icon_color = "primary"
+
+[widget.keyboard_layout]
+scale = 1.2
+
+[widget.launcher]
+capsule_foreground = "surface"
+capsule_padding = 3
+capsule_radius = 0
+custom_image = "/home/aeon/Pictures/nix-flake.png"
+custom_image_colorize = true
+glyph = "brand-windows-filled"
+scale = 1.75
+
+[widget.media]
+capsule = true
+capsule_fill = "surface"
+capsule_padding = 8
+scale = 1.2
+
+[widget.network]
+icon_color = "secondary"
+
+[widget.notifications]
+capsule_opacity = 0.5
+
+[widget.screenshot]
+scale = 1.2
+
+[widget.seperator]
+text = "·"
+type = "text"
+
+[widget.settings]
+scale = 1.2
+
+[widget.slash]
+text = "|"
+type = "text"
+
+[widget.spacer_1]
+length = 400
+type = "spacer"
+
+[widget.spacer_3]
+length = 15
+type = "spacer"
+
+[widget.taskbar]
+capsule = true
+capsule_radius = 0
+hide_empty_workspaces = true
+icon_scale = 1.7000000000000002
+item_spacing = 12
+pinned = [
+    "floorp",
+    "thunar",
+    "com.mitchellh.ghostty",
+    "vesktop",
+    "whatsapp",
+    "sonora",
+    "spotify",
+    "dev.zed.Zed",
+    "youtube",
+    "google-drive"
+]
+pinned_opacity = 1.0
+window_title_max_width = 60
+
+[widget.text_2]
+color = "primary"
+text = "------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------"
+type = "text"
+
+[widget.theme-switcher]
+scale = 1.2
+type = "theblackdon/theme-switcher:theme-switcher"
+
+[widget.toggle]
+type = "decksters-lab/palette-creator:toggle"
+
+[widget.tray]
+drawer = true
+
+[widget.volume]
+icon_color = "secondary"
+
+[widget.wallhaven]
+glyph = "building-store"
+scale = 1.2
+type = "noctalia/wallhaven:wallhaven"
+
+[widget.wallhaven_2]
+scale = 1.2
+type = "noctalia/wallhaven:wallhaven"
+
+[widget.wallpaper]
+color = "primary"
+glyph = "ballpen"
+
+[widget.widget]
+type = "ezio-noir/umbriel-submap:widget"
+
+[widget.workspacer]
+text = "Active: "
+type = "text"
+
+[widget.workspacer1-5]
+text = "⤙"
+type = "text"
+
+[widget.workspacer2]
+text = "⤚"
+type = "text"
+
+[widget.workspaces]
+active_pill_size = 2.0
+anchor = true
+capsule_fill = "shadow"
+capsule_padding = 8
+capsule_radius = 0
+label_source = "name"
+max_label_chars = 5
+occupied_color = "tertiary"
+show_all_outputs = true
+show_icons = false
+show_tooltip = false
+style = "minimal"

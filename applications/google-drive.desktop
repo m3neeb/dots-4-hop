@@ -1,0 +1,8 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Google Drive
+Exec=xdg-open https://drive.google.com/drive/home
+Terminal=false
+Icon=google-drive
+Categories=Network;WebBrowser;

@@ -1,0 +1,6 @@
+
+/* Force square corners across GTK 4 widgets */
+* {
+    border-radius: 0;
+}
+
