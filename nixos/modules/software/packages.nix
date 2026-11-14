@@ -25,7 +25,6 @@
     loupe
     mpv
     papers
-    abiword
     spotify
     noctalia
     xwayland-satellite

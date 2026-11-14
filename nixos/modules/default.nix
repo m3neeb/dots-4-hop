@@ -3,7 +3,6 @@
 {
   imports = [
     ./apps/thunar.nix
-    ./apps/gearlever.nix
     
     ./desktop/desktop.nix
     ./desktop/fonts.nix

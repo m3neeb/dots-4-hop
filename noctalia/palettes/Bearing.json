@@ -1,0 +1,70 @@
+{
+  "dark": {
+    "mPrimary": "#7cc0f0",
+    "mOnPrimary": "#10222f",
+    "mSecondary": "#e39a5f",
+    "mOnSecondary": "#2b1806",
+    "mTertiary": "#93c5ae",
+    "mOnTertiary": "#10261d",
+    "mError": "#ee6a50",
+    "mOnError": "#2d0c05",
+    "mSurface": "#1a222c",
+    "mOnSurface": "#eef1ec",
+    "mSurfaceVariant": "#26313d",
+    "mOnSurfaceVariant": "#c3ccd2",
+    "mOutline": "#44525f",
+    "mShadow": "#0d1218",
+    "mHover": "#2f3d4b",
+    "mOnHover": "#eef1ec",
+    "terminal": {
+      "foreground": "#eef1ec",
+      "background": "#1a222c",
+      "selectionFg": "#eef1ec",
+      "selectionBg": "#2f4a63",
+      "cursorText": "#1a222c",
+      "cursor": "#e39a5f",
+      "normal": {
+        "black": "#2a323c", "red": "#d9553d", "green": "#5fa36a", "yellow": "#d9a441",
+        "blue": "#4f9fdc", "magenta": "#b07fb5", "cyan": "#4cb3c4", "white": "#d8dcd6"
+      },
+      "bright": {
+        "black": "#4a5666", "red": "#ee6a50", "green": "#7dc088", "yellow": "#efbf5c",
+        "blue": "#7cc0f0", "magenta": "#c99dcd", "cyan": "#78cbd9", "white": "#f4f1ea"
+      }
+    }
+  },
+  "light": {
+    "mPrimary": "#2b7fc4",
+    "mOnPrimary": "#ffffff",
+    "mSecondary": "#a8582a",
+    "mOnSecondary": "#ffffff",
+    "mTertiary": "#3f7f66",
+    "mOnTertiary": "#ffffff",
+    "mError": "#c63d26",
+    "mOnError": "#ffffff",
+    "mSurface": "#f6f3ec",
+    "mOnSurface": "#2a2d33",
+    "mSurfaceVariant": "#e8e4da",
+    "mOnSurfaceVariant": "#55585e",
+    "mOutline": "#b9b6aa",
+    "mShadow": "#4a4a48",
+    "mHover": "#d9e8f4",
+    "mOnHover": "#1d3447",
+    "terminal": {
+      "foreground": "#2a2d33",
+      "background": "#f6f3ec",
+      "selectionFg": "#2a2d33",
+      "selectionBg": "#cfe2f1",
+      "cursorText": "#f6f3ec",
+      "cursor": "#a8582a",
+      "normal": {
+        "black": "#2a2d33", "red": "#c63d26", "green": "#3f7f4a", "yellow": "#a8741a",
+        "blue": "#2b6fb0", "magenta": "#8a5a95", "cyan": "#247f94", "white": "#cfcbbf"
+      },
+      "bright": {
+        "black": "#55585e", "red": "#dc5a42", "green": "#56a062", "yellow": "#c58f2a",
+        "blue": "#4a95d6", "magenta": "#a479ae", "cyan": "#3fa0b5", "white": "#f6f3ec"
+      }
+    }
+  }
+}

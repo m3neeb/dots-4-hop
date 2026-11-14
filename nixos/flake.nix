@@ -13,7 +13,7 @@
 
     umbriel.url = "github:noctalia-dev/umbriel/cachix";
 
-    sonora.url = "github:sonorahq/sonora";
+    sonora.url = "github:sonorahq/sonora/stable";
   };
 
   outputs = inputs@{ self, nixpkgs, home-manager, lazyvim, umbriel, sonora, ... }: {
@@ -27,7 +27,7 @@
 
         {
           environment.systemPackages = [
-            inputs.sonora.packages.x86_64-linux.sonora-bin
+            inputs.sonora.packages.x86_64-linux.default
           ];
 
           home-manager.useGlobalPkgs = true;
