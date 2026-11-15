@@ -33,4 +33,4 @@ hide_when_typing = false
 hide_timeout_ms = 0
 
 [input.focus]
-follows_mouse = false
+follows_mouse = "off"

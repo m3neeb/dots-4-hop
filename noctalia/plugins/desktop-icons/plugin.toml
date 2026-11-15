@@ -1,0 +1,219 @@
+id           = "you/desktop-icons"      # change "you" to your own handle before publishing
+name         = "Desktop Icons"
+version      = "0.1.0"
+plugin_api   = 43                        # layers (36) + container colour roles (43); needs Noctalia >= 5.4.0
+author       = "you"
+license      = "MIT"
+icon         = "layout-grid"
+description  = "Files, folders and launchers on the desktop, with a right-click menu."
+tags         = ["desktop", "utility", "files"]
+dependencies = ["xdg-utils", "glib2"]
+
+# ───────────────────────── settings (plugin-level, shared by every entry) ─────────────────────────
+
+[[setting]]
+key             = "directory"
+type            = "folder"
+label_key       = "settings.directory.label"
+description_key = "settings.directory.description"
+default         = "~/Desktop"
+
+[[setting]]
+key             = "output"
+type            = "string"
+label_key       = "settings.output.label"
+description_key = "settings.output.description"
+default         = ""
+
+[[setting]]
+key             = "icon_style"
+type            = "select"
+label_key       = "settings.icon_style.label"
+description_key = "settings.icon_style.description"
+default         = "image"
+options = [
+  { value = "image", label_key = "settings.icon_style.image" },
+  { value = "glyph", label_key = "settings.icon_style.glyph" },
+]
+
+[[setting]]
+key       = "cell_size"
+type      = "int"
+label_key = "settings.cell_size.label"
+default   = 96
+min       = 72
+max       = 160
+step      = 4
+
+[[setting]]
+key       = "icon_size"
+type      = "int"
+label_key = "settings.icon_size.label"
+default   = 48
+min       = 24
+max       = 96
+step      = 4
+
+[[setting]]
+key       = "show_hidden"
+type      = "bool"
+label_key = "settings.show_hidden.label"
+default   = false
+
+[[setting]]
+key       = "sort"
+type      = "select"
+label_key = "settings.sort.label"
+default   = "name"
+options = [
+  { value = "name",     label_key = "settings.sort.name" },
+  { value = "modified", label_key = "settings.sort.modified" },
+  { value = "type",     label_key = "settings.sort.type" },
+]
+
+[[setting]]
+key       = "folders_first"
+type      = "bool"
+label_key = "settings.folders_first.label"
+default   = true
+
+[[setting]]
+key             = "thumbnails"
+type            = "bool"
+label_key       = "settings.thumbnails.label"
+description_key = "settings.thumbnails.description"
+default         = true
+
+[[setting]]
+key       = "thumbnail_max_mb"
+type      = "int"
+label_key = "settings.thumbnail_max_mb.label"
+default   = 8
+min       = 1
+max       = 64
+advanced  = true
+
+[[setting]]
+key             = "label_backing"
+type            = "double"
+label_key       = "settings.label_backing.label"
+description_key = "settings.label_backing.description"
+default         = 0.0
+min             = 0.0
+max             = 1.0
+step            = 0.05
+
+[[setting]]
+key             = "empty_menu"
+type            = "bool"
+label_key       = "settings.empty_menu.label"
+description_key = "settings.empty_menu.description"
+default         = false
+
+[[setting]]
+key       = "single_click"
+type      = "bool"
+label_key = "settings.single_click.label"
+default   = false
+
+[[setting]]
+key       = "double_click_ms"
+type      = "int"
+label_key = "settings.double_click_ms.label"
+default   = 450
+min       = 200
+max       = 1000
+step      = 50
+advanced  = true
+
+[[setting]]
+key             = "extra_menu"
+type            = "string_list"
+label_key       = "settings.extra_menu.label"
+description_key = "settings.extra_menu.description"
+default         = []
+
+[[setting]]
+key       = "padding_top"
+type      = "int"
+label_key = "settings.padding_top.label"
+default   = 8
+min       = 0
+max       = 200
+advanced  = true
+
+[[setting]]
+key       = "padding_left"
+type      = "int"
+label_key = "settings.padding_left.label"
+default   = 8
+min       = 0
+max       = 200
+advanced  = true
+
+[[setting]]
+key             = "padding_bottom"
+type            = "int"
+label_key       = "settings.padding_bottom.label"
+description_key = "settings.padding_bottom.description"
+default         = 48
+min             = 0
+max             = 300
+advanced        = true
+
+[[setting]]
+key             = "rows"
+type            = "int"
+label_key       = "settings.rows.label"
+description_key = "settings.rows.description"
+default         = 0
+min             = 0
+max             = 40
+advanced        = true
+
+[[setting]]
+key             = "hit_divisions"
+type            = "int"
+label_key       = "settings.hit_divisions.label"
+description_key = "settings.hit_divisions.description"
+default         = 1
+min             = 1
+max             = 3
+advanced        = true
+
+[[setting]]
+key             = "hit_opacity"
+type            = "double"
+label_key       = "settings.hit_opacity.label"
+description_key = "settings.hit_opacity.description"
+default         = 0.02
+min             = 0.0
+max             = 1.0
+step            = 0.01
+advanced        = true
+
+# ───────────────────────── entries ─────────────────────────
+
+# Watches the folder, resolves icons, and performs every file operation.
+[[service]]
+id    = "scanner"
+entry = "service.luau"
+
+# The desktop itself: a full-output surface *below* normal windows.
+# (If it ends up hidden behind the wallpaper, try layer = "background".)
+[[layer]]
+id       = "desktop"
+entry    = "desktop.luau"
+layer    = "bottom"
+anchors  = ["top", "bottom", "left", "right"]
+keyboard = "none"
+visible  = true
+
+# The context menu / rename dialog. Resized and moved at runtime via noctalia.layer.configure.
+[[layer]]
+id       = "menu"
+entry    = "menu.luau"
+layer    = "top"
+anchors  = ["top", "left"]
+keyboard = "none"
+visible  = false
