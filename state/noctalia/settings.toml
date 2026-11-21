@@ -1,36 +1,7 @@
-config_version = 16
+config_version = 20
 
 [bar]
-order = [ "Bar", "bar_2", "bar" ]
-
-    [bar.Bar]
-    border = "primary"
-    center = [ "clock", "seperator", "date", "widget" ]
-    concave_edge_corners = false
-    enabled = false
-    end = [
-        "wallpaper",
-        "bar_3",
-        "seperator",
-        "battery",
-        "seperator",
-        "volume",
-        "seperator",
-        "input_volume",
-        "seperator",
-        "brightness",
-        "seperator",
-        "network"
-    ]
-    font_scale = 1.1999999806284904
-    hover_highlight = false
-    margin_ends = 0
-    panel_overlap = 0
-    radius = 0
-    scale = 0.90000000596046448
-    shadow = false
-    start = [ "workspacer", "workspacer1-5", "bar_4", "workspacer2", "spacer_3", "toggle" ]
-    thickness = 25
+order = [ "bar_2", "bar" ]
 
     [bar.bar]
     border = "primary"
@@ -79,7 +50,7 @@ order = [ "Bar", "bar_2", "bar" ]
     radius = 0
     radius_bottom_right = 0
     shadow = false
-    start = [ "launcher", "group:g1", "taskbar", "tray" ]
+    start = [ "Start", "group:g1", "taskbar", "tray" ]
     thickness = 40
 
         [[bar.bar_2.capsule_group]]
@@ -96,7 +67,6 @@ order = [ "Bar", "bar_2", "bar" ]
         radius = 0.0
 
 [control_center]
-circular_avatar = false
 show_shortcut_labels = false
 width = 800
 
@@ -115,11 +85,9 @@ width = 800
 [desktop_widgets]
 schema_version = 2
 widget_order = [
-    "desktop-widget-0000000000000006",
     "desktop-widget-0000000000000005",
     "desktop-widget-0000000000000004",
     "desktop-widget-0000000000000001",
-    "desktop-widget-0000000000000002",
     "desktop-widget-0000000000000003"
 ]
 
@@ -131,8 +99,8 @@ widget_order = [
     [desktop_widgets.widget.desktop-widget-0000000000000001]
     box_height = 304.0
     box_width = 320.0
-    cx = 176.0
-    cy = 676.0
+    cx = 1744.0
+    cy = 684.0
     output = "eDP-1"
     placement_height = 1080.0
     placement_width = 1920.0
@@ -148,35 +116,15 @@ widget_order = [
         show_events_location = false
         show_week_numbers = true
 
-    [desktop_widgets.widget.desktop-widget-0000000000000002]
-    box_height = 320.0
-    box_width = 224.0
-    cx = 1792.0
-    cy = 556.0
-    output = "eDP-1"
-    placement_height = 1080.0
-    placement_width = 1920.0
-    rotation = 0.0
-    type = "media_player"
-
-        [desktop_widgets.widget.desktop-widget-0000000000000002.settings]
-        album_art_background = false
-        album_art_blur = 96
-        audio_visualizer = true
-        background_opacity = 1.0
-        background_radius = 0
-        hide_when_no_media = false
-        layout = "vertical"
-
     [desktop_widgets.widget.desktop-widget-0000000000000003]
     box_height = 232.0
     box_width = 320.0
-    cx = 176.0
-    cy = 384.0
+    cx = 1744.0
+    cy = 388.0
     output = "eDP-1"
     placement_height = 1080.0
     placement_width = 1920.0
-    rotation = 0.0
+    rotation = -0.0
     type = "weather"
 
         [desktop_widgets.widget.desktop-widget-0000000000000003.settings]
@@ -188,7 +136,7 @@ widget_order = [
     [desktop_widgets.widget.desktop-widget-0000000000000004]
     box_height = 216.0
     box_width = 320.0
-    cx = 176.0
+    cx = 1744.0
     cy = 400.0
     output = "eDP-1"
     placement_height = 1080.0
@@ -207,8 +155,8 @@ widget_order = [
     [desktop_widgets.widget.desktop-widget-0000000000000005]
     box_height = 296.0
     box_width = 320.0
-    cx = 176.0
-    cy = 688.0
+    cx = 1744.0
+    cy = 692.0
     output = "eDP-1"
     placement_height = 1080.0
     placement_width = 1920.0
@@ -224,27 +172,6 @@ widget_order = [
         show_events = false
         show_events_location = false
         show_week_numbers = true
-
-    [desktop_widgets.widget.desktop-widget-0000000000000006]
-    box_height = 320.0
-    box_width = 224.0
-    cx = 1792.0
-    cy = 564.0
-    output = "eDP-1"
-    placement_height = 1080.0
-    placement_width = 1920.0
-    rotation = 0.0
-    type = "media_player"
-
-        [desktop_widgets.widget.desktop-widget-0000000000000006.settings]
-        album_art_background = false
-        album_art_blur = 96
-        audio_visualizer = true
-        background_color = "shadow"
-        background_opacity = 0.75
-        background_radius = 0
-        hide_when_no_media = false
-        layout = "vertical"
 
 [dock]
 background_opacity = 0.99999997764825821
@@ -325,6 +252,7 @@ widget_order = [
         show_keyboard_layout = true
         show_login_button = true
         show_media = true
+        show_media_controls = true
         show_password_reveal = true
         show_session_buttons = true
         show_unlock_hint = true
@@ -332,9 +260,9 @@ widget_order = [
 
     [lockscreen_widgets.widget."lockscreen-login-box@eDP-1"]
     box_height = 70.0
-    box_width = 401.2578125
-    cx = 960.62890625
-    cy = 979.48046875
+    box_width = 400.0
+    cx = 960.0
+    cy = 975.0
     output = "eDP-1"
     placement_height = 1080.0
     placement_width = 1920.0
@@ -353,6 +281,7 @@ widget_order = [
         show_keyboard_layout = false
         show_login_button = true
         show_media = true
+        show_media_controls = true
         show_password_reveal = false
         show_session_buttons = true
         show_unlock_hint = false
@@ -381,6 +310,7 @@ widget_order = [
         show_keyboard_layout = true
         show_login_button = true
         show_media = true
+        show_media_controls = true
         show_password_reveal = true
         show_session_buttons = true
         show_unlock_hint = true
@@ -439,14 +369,49 @@ video_directory = "/home/aeon/Videos/Live"
 carousel_placement = "attached"
 wallpaper-picker_placement = "attached"
 
+[plugin_settings."you/desktop-icons"]
+hit_opacity = 0.0
+label_backing = 0.40000000000000002
+rows = 1
+
+[plugin_settings."you/start-menu"]
+group_names = [ "Daily Use", "Communication", "Entertainment" ]
+menu_placement = "attached"
+most_used_count = 3
+rail_folders = [
+    "Documents|file-text|~/Documents",
+    "Pictures|photo|~/Pictures",
+    "Videos|camera|~/Videos",
+    "Downloads|download|~/Downloads"
+]
+row_height = 36
+search_files = false
+settings_command = "noctalia msg settings-open"
+
 [plugins]
-enabled = [ "weinguyen/shell-command", "tordex/stdout" ]
+enabled = [ "tordex/stdout", "weinguyen/shell-command", "you/desktop-icons", "you/start-menu" ]
+
+    [[plugins.source]]
+    kind = "git"
+    location = "https://github.com/noctalia-dev/official-plugins"
+    name = "official"
+
+    [[plugins.source]]
+    kind = "git"
+    location = "https://github.com/noctalia-dev/community-plugins"
+    name = "community"
+
+    [[plugins.source]]
+    kind = "path"
+    location = "~/.config/noctalia/plugins"
+    name = "Files"
 
 [shell]
 app_icon_color = "primary"
 avatar_path = "/home/aeon/Pictures/dino.jpg"
 button_borders = false
 card_borders = false
+circular_avatar = false
 corner_radius_scale = 0.0
 font_family = "Iosevka Nerd Font Propo"
 input_borders = false
@@ -460,13 +425,13 @@ show_close_buttons = false
     category_icons_only = true
     compact = true
     default_view = "all"
+    pinned = [ "floorp-b2ac1c8e-5a85-4ae4-b071-f3be4f3c97fb", "floorp-3d983b87-2e71-4901-8940-9d0d93fe6c4b" ]
     sort_by_usage = false
     width = 750
 
     [shell.panel]
     border_color = "primary"
     border_width = 2.0
-    control_center_position = "top_center"
     launcher_placement = "attached"
     open_near_click_control_center = true
     open_near_click_launcher = true
@@ -522,15 +487,29 @@ show_close_buttons = false
 enabled = false
 
 [theme]
-community_palette = "ADW"
-custom_palette = "Zenate"
+builtin = "Catppuccin"
+community_palette = "Heartbox"
+custom_palette = "Cumulus"
 mode = "dark"
-source = "community"
-wallpaper_scheme = "faithful"
+source = "custom"
+wallpaper_scheme = "m3-tonal-spot"
 
     [theme.templates]
     builtin_ids = [ "btop", "gtk3", "gtk4", "ghostty", "kcolorscheme", "mango", "qt", "umbriel" ]
-    community_ids = [ "sonora", "pywalfox", "discord", "lazyvim", "neovim", "zed", "fastfetch", "papirus-icons", "lsd", "starship" ]
+    community_ids = [
+        "sonora",
+        "pywalfox",
+        "discord",
+        "lazyvim",
+        "neovim",
+        "zed",
+        "vicinae",
+        "fastfetch",
+        "papirus-icons",
+        "lsd",
+        "starship",
+        "tuios"
+    ]
 
 [wallpaper]
 directory = "/home/aeon/Pictures/Wallpapers"
@@ -540,13 +519,13 @@ transition = [ "diamond", "disc", "golden", "honeycomb", "melt", "pixel", "strip
     recursive = true
 
     [wallpaper.default]
-    path = "/home/aeon/Pictures/Wallpapers/Miscellaneous/wallhaven-zpypeg.jpg"
+    path = "/home/aeon/Pictures/Wallpapers/Miscellaneous/wallhaven-je1ovm.png"
 
     [wallpaper.last]
-    path = "/home/aeon/Pictures/Wallpapers/Miscellaneous/wallhaven-zpypeg.jpg"
+    path = "/home/aeon/Pictures/Wallpapers/Miscellaneous/wallhaven-je1ovm.png"
 
     [wallpaper.monitors.eDP-1]
-    path = "/home/aeon/Pictures/Wallpapers/Miscellaneous/wallhaven-zpypeg.jpg"
+    path = "/home/aeon/Pictures/Wallpapers/Miscellaneous/wallhaven-je1ovm.png"
 
 [widget.Search]
 capsule = true
@@ -557,7 +536,16 @@ text = " Search "
 type = "text"
 
     [widget.Search.actions]
-    left = "exec noctalia msg panel-toggle launcher"
+    left = "exec noctalia msg panel-toggle you/start-menu:menu"
+
+[widget.Start]
+custom_image = "/home/aeon/Pictures/nix-flake.png"
+custom_image_colorize = true
+scale = 2.0
+type = "custom_button"
+
+    [widget.Start.actions]
+    left = "exec noctalia msg panel-toggle you/start-menu:menu"
 
 [widget.Stats]
 glyph = "server-2"
@@ -691,25 +679,28 @@ length = 15
 type = "spacer"
 
 [widget.taskbar]
-capsule = true
 capsule_radius = 0
 hide_empty_workspaces = true
 icon_scale = 1.7000000000000002
 item_spacing = 12
+minimal = true
 pinned = [
     "floorp",
-    "thunar",
+    "dev.noctalia.luciole",
     "com.mitchellh.ghostty",
     "vesktop",
     "whatsapp",
-    "sonora",
     "spotify",
     "dev.zed.Zed",
     "youtube",
+    "sonora",
     "google-drive"
 ]
 pinned_opacity = 1.0
+show_workspace_label = false
 window_title_max_width = 60
+workspace_group_capsule = false
+workspace_label_placement = "inside"
 
 [widget.text_2]
 color = "primary"
@@ -765,8 +756,8 @@ capsule_padding = 8
 capsule_radius = 0
 label_source = "name"
 max_label_chars = 5
+monitors = [ "*" ]
 occupied_color = "tertiary"
-show_all_outputs = true
 show_icons = false
 show_tooltip = false
 style = "minimal"

@@ -3,11 +3,11 @@
 # Applications
 "Mod+Return" = "spawn ghostty"
 "Mod+B" = "spawn floorp"
-"Mod+E" = "spawn thunar"
+"Mod+E" = "spawn luciole"
 "Alt+Z" = "spawn gsr-ui"
 
 # Noctalia
-"Mod" = "spawn noctalia msg panel-toggle launcher"
+"Mod" = "spawn noctalia msg panel-toggle you/start-menu:menu"
 "Alt+Tab" = "spawn noctalia msg window-switcher hold"
 "Mod+Comma" = "spawn noctalia msg settings-toggle"
 

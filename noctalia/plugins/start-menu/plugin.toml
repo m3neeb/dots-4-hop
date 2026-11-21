@@ -1,0 +1,112 @@
+id           = "you/start-menu"          # change "you" to your own handle (then update panel_id in settings)
+name         = "Start Menu"
+version      = "0.1.0"
+plugin_api   = 43                         # panel context menus (28), scroll/reveal (21/33), colour roles (43); needs Noctalia >= 5.4.0
+author       = "you"
+license      = "MIT"
+icon         = "brand-windows"
+description  = "A Windows 10 style start menu: app list, pinned tiles, search and a side rail."
+tags         = ["launcher", "start-menu", "utility"]
+dependencies = ["glib2", "awk", "findutils"]
+
+# ───────────────────────── settings (plugin-level, shared by every entry) ─────────────────────────
+
+[[setting]]
+key             = "group_names"
+type            = "string_list"
+label_key       = "settings.group_names.label"
+description_key = "settings.group_names.description"
+default         = ["Life at a glance", "Play and explore"]
+
+[[setting]]
+key       = "tile_style"
+type      = "select"
+label_key = "settings.tile_style.label"
+default   = "accent"
+options = [
+  { value = "accent",  label_key = "settings.tile_style.accent" },
+  { value = "surface", label_key = "settings.tile_style.surface" },
+]
+
+[[setting]]
+key       = "most_used_count"
+type      = "int"
+label_key = "settings.most_used_count.label"
+default   = 4
+min       = 0
+max       = 8
+
+[[setting]]
+key             = "rail_folders"
+type            = "string_list"
+label_key       = "settings.rail_folders.label"
+description_key = "settings.rail_folders.description"
+default         = ["Documents|file-text|~/Documents", "Pictures|photo|~/Pictures", "Downloads|download|~/Downloads"]
+
+[[setting]]
+key             = "lock_command"
+type            = "string"
+label_key       = "settings.lock_command.label"
+description_key = "settings.lock_command.description"
+default         = "loginctl lock-session"
+
+[[setting]]
+key             = "settings_command"
+type            = "string"
+label_key       = "settings.settings_command.label"
+description_key = "settings.settings_command.description"
+default         = ""
+
+[[setting]]
+key             = "extra_app_dirs"
+type            = "string_list"
+label_key       = "settings.extra_app_dirs.label"
+description_key = "settings.extra_app_dirs.description"
+default         = []
+advanced        = true
+
+[[setting]]
+key       = "row_height"
+type      = "int"
+label_key = "settings.row_height.label"
+default   = 40
+min       = 28
+max       = 64
+step      = 2
+advanced  = true
+
+[[setting]]
+key             = "panel_id"
+type            = "string"
+label_key       = "settings.panel_id.label"
+description_key = "settings.panel_id.description"
+default         = "you/start-menu:menu"
+advanced        = true
+
+# ───────────────────────── entries ─────────────────────────
+
+# Reads .desktop files in small chunks and publishes the app list.
+[[service]]
+id    = "apps"
+entry = "service.luau"
+
+# The start menu itself. Size is host-owned, so it is fixed here.
+[[panel]]
+id             = "menu"
+entry          = "panel.luau"
+width          = 700
+height         = 740
+placement      = "floating"
+position       = "bottom_left"
+keyboard_focus = "exclusive"
+
+# The start button for the bar.
+[[widget]]
+id    = "button"
+entry = "widget.luau"
+
+  [[widget.setting]]
+  key       = "glyph"
+  type      = "glyph"
+  label_key = "settings.glyph.label"
+  default   = "brand-windows"

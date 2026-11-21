@@ -1,19 +1,19 @@
 [annotate]
 advanced_size = "0"
-color_arrow = "1,1,1,1"
+color_arrow = "0.2,0.8,0.4,1"
 color_blur = "0.96,0.2,0.28,1"
-color_brush = "1,1,1,1"
+color_brush = "0.96,0.2,0.28,1"
 color_circle = "0.96,0.2,0.28,1"
 color_crop = "0.96,0.2,0.28,1"
 color_eraser = "0.96,0.2,0.28,1"
 color_highlighter = "1,0.91,0.2,1"
-color_line = "0.96,0.2,0.28,1"
+color_line = "0.2,0.55,1,1"
 color_move = "0.96,0.2,0.28,1"
 color_numbering = "0.96,0.2,0.28,1"
 color_rectangle = "0.96,0.2,0.28,1"
-color_text = "0.96,0.2,0.28,1"
+color_text = "0.2,0.55,1,1"
 fill = "off"
-tool = "arrow"
+tool = "brush"
 toolbar_positions = "{}"
 width_arrow = "6"
 width_blur = "32"
@@ -41,7 +41,7 @@ sort = "name_asc"
 
 [theme_templates]
 applied_builtin_ids = "btop ghostty gtk3 gtk4 kcolorscheme mango qt umbriel"
-applied_community_ids = "discord fastfetch lazyvim lsd neovim papirus-icons pywalfox sonora starship zed"
+applied_community_ids = "discord fastfetch lazyvim lsd neovim papirus-icons pywalfox sonora starship tuios vicinae zed"
 
 [wallpaper_panel]
 flatten = false
