@@ -3,8 +3,8 @@
 {
   imports = [
     ./hardware-configuration.nix
-    ./modules/default.nix
+    ./modules
   ];
-  
+
   system.stateVersion = "26.05";
 }

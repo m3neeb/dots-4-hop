@@ -2,25 +2,33 @@
 
 {
   imports = [
-    ./apps/thunar.nix
-    
-    ./desktop/desktop.nix
+    # Base system
+    ./core/boot.nix
+    ./core/nix.nix
+    ./core/locale.nix
+    ./core/networking.nix
+    ./core/memory.nix
+    ./core/users.nix
+    ./core/home-manager.nix
+
+    # Hardware
+    ./hardware/audio.nix
+    ./hardware/graphics.nix
+    ./hardware/peripherals.nix
+    ./hardware/power.nix
+
+    # Desktop environment
+    ./desktop/theming.nix
+    ./desktop/portals.nix
     ./desktop/fonts.nix
-    ./desktop/locale.nix
+    ./desktop/sddm.nix
+    ./desktop/shell.nix
+    ./desktop/files.nix
 
-    ./functionality/audio.nix
-    ./functionality/drivers.nix
-    ./functionality/hardware.nix
-    ./functionality/networking.nix
-
-    ./software/nixconf.nix
-    ./software/packages.nix
-    ./software/programs.nix
-    ./software/python.nix
-    ./software/services.nix
-    
-    ./system/boot.nix
-    ./system/sddm.nix
-    ./system/users.nix
+    # Software
+    ./programs/cli.nix
+    ./programs/apps.nix
+    ./programs/python.nix
+    ./programs/compat.nix
   ];
 }

@@ -1,0 +1,11 @@
+{ ... }:
+
+{
+  zramSwap = {
+    enable = true;
+    algorithm = "zstd";
+    memoryPercent = 25;
+  };
+
+  services.earlyoom.enable = true;
+}

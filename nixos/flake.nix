@@ -10,57 +10,16 @@
     };
 
     lazyvim.url = "github:pfassina/lazyvim-nix";
-
     umbriel.url = "github:noctalia-dev/umbriel/cachix";
-
+    luciole.url = "github:noctalia-dev/luciole";
     sonora.url = "github:sonorahq/sonora/stable";
   };
 
-  outputs = inputs@{ self, nixpkgs, home-manager, lazyvim, umbriel, sonora, ... }: {
+  outputs = { nixpkgs, ... }@inputs: {
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
-
-      modules = [
-        ./configuration.nix
-        inputs.umbriel.nixosModules.default
-        home-manager.nixosModules.home-manager
-
-        {
-          environment.systemPackages = [
-            inputs.sonora.packages.x86_64-linux.default
-          ];
-
-          home-manager.useGlobalPkgs = true;
-          home-manager.useUserPackages = true;
-
-          home-manager.extraSpecialArgs = {
-            inherit inputs;
-          };
-
-          home-manager.users.aeon = {
-            imports = [ ./home ];
-
-            home.packages = [
-              home-manager.packages.x86_64-linux.home-manager
-            ];
-          };
-        }
-      ];
-    };
-
-    homeConfigurations.aeon = home-manager.lib.homeManagerConfiguration {
-      pkgs = import nixpkgs {
-        system = "x86_64-linux";
-        config.allowUnfree = true;
-      };
-
-      extraSpecialArgs = {
-        inherit inputs;
-      };
-
-      modules = [
-        ./home/default.nix
-      ];
+      specialArgs = { inherit inputs; };
+      modules = [ ./configuration.nix ];
     };
   };
 }

@@ -1,4 +1,3 @@
-
 { ... }:
 
 {
@@ -12,13 +11,12 @@
     '';
 
     shellAliases = {
-      pkgs = "sudoedit /etc/nixos/modules/software/packages.nix";
+      pkgs = "sudoedit /etc/nixos/modules/programs/apps.nix";
       rebuild = "sudo nixos-rebuild switch --flake /etc/nixos#nixos";
       rebuild-boot = "sudo nixos-rebuild boot --flake /etc/nixos#nixos";
-      fastfetch = "/home/aeon/.config/fastfetch/bin/fastfetch";
+      fastfetch = "fastfetch-random";
       ls = "lsd";
       edit = "sudoedit";
     };
   };
 }
-

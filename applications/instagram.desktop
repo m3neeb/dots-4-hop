@@ -1,8 +1,0 @@
-[Desktop Entry]
-Version=1.0
-Type=Application
-Name=Instagram
-Exec=xdg-open https://www.instagram.com/
-Terminal=false
-Icon=instagram
-Categories=Network;WebBrowser;
