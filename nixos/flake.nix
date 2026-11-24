@@ -11,7 +11,8 @@
 
     lazyvim.url = "github:pfassina/lazyvim-nix";
     umbriel.url = "github:noctalia-dev/umbriel/cachix";
-    luciole.url = "github:noctalia-dev/luciole";
+    noctalia.url = "github:noctalia-dev/noctalia/cachix";
+    luciole.url = "github:noctalia-dev/luciole/cachix";
     sonora.url = "github:sonorahq/sonora/stable";
   };
 
