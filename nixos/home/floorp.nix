@@ -3,6 +3,7 @@
 
 let
   profile = null;
+  localIcon = file: "/home/aeon/.local/share/icons/${file}";
 in
 {
   home.packages = lib.optionals (profile == null) [
@@ -29,7 +30,7 @@ in
     genericName = "Web Browser";
     comment = "Browse the web";
     exec = "floorp %U";
-    icon = "floorp";
+    icon = localIcon "floorp.png";
     terminal = false;
     categories = [ "Network" "WebBrowser" ];
     mimeType = [
