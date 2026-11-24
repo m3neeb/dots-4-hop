@@ -31,29 +31,5 @@ in
       startupNotify = true;
       settings.StartupWMClass = "dev.noctalia.luciole";
     };
-
-    "floorp" = {
-      name = "Floorp";
-      genericName = "Web Browser";
-      comment = "Browse the web";
-      exec = "floorp %U";
-      icon = "floorp";
-      terminal = false;
-      type = "Application";
-      categories = [
-        "Network"
-        "WebBrowser"
-      ];
-      mimeType = [
-        "text/html"
-        "text/xml"
-        "application/xhtml+xml"
-        "application/xml"
-        "application/pdf"
-        "x-scheme-handler/http"
-        "x-scheme-handler/https"
-      ];
-      startupNotify = true;
-    };
   };
 }
