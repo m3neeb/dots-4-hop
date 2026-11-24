@@ -2,22 +2,14 @@
 
 {
   environment.systemPackages = with pkgs; [
-    # Browser
-    floorp-bin
-    pywalfox-native
-
-    # Communication / media
+    # floorp, ghostty, mpv and fastfetch are installed from home/
     vesktop
     spotify
-    mpv
     loupe
     papers
 
-    # Editors / terminals
     zed-editor
-    ghostty
 
-    # From flake inputs
     inputs.sonora.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
 }

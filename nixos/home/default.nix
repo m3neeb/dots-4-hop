@@ -6,7 +6,6 @@
     ./starship.nix
     ./lazyvim.nix
 
-    # Dotfiles (raw files live in ./config)
     ./fastfetch.nix
     ./ghostty.nix
     ./gtk.nix

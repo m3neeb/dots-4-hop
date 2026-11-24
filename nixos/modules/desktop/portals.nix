@@ -14,7 +14,6 @@
       xdg-desktop-portal-wlr
     ];
 
-    # Replaces ~/.config/xdg-desktop-portal/portals.conf
     config.common = {
       default = [ "luciole" "gtk" ];
       "org.freedesktop.impl.portal.FileChooser" = [ "luciole" "gtk" ];

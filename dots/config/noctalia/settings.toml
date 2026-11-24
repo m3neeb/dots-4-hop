@@ -1,0 +1,3 @@
+[theme.templates.user.sonder-newtab]
+input_path = "$XDG_CONFIG_HOME/noctalia/templates/sonder-newtab.css"
+output_path = "/home/aeon/.config/sonder/noctalia-colors.css"
