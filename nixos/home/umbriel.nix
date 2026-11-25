@@ -1,7 +1,8 @@
-{ inputs, ... }:
+{ inputs, lib, ... }:
 
 let
-  parts = [
+  # Each file owns distinct top-level tables, so a plain merge is enough.
+  parts = map (n: import (./config/umbriel + "/${n}.nix")) [
     "animation"
     "appearance"
     "autostart"
@@ -22,13 +23,11 @@ in
   programs.umbriel = {
     enable = true;
 
-    # Absolute paths: config.toml is a store symlink, so relative includes could
-    # miss ~/.config/umbriel and silently drop noctalia.toml. It stays last so
-    # its colors win. Optional so a build-time check can't fail on home-only files.
-    settings.include.optional.files =
-      map (n: "~/.config/umbriel/cfg/${n}.toml") parts
-      ++ [ "~/.config/umbriel/noctalia.toml" ];
+    settings = lib.foldl' lib.recursiveUpdate {
+      # The main file is applied last, so noctalia.toml has to be included and
+      # not merged in: it owns colors.overview (dropped from overview.nix for
+      # that reason) and its own window rules.
+      include.optional.files = [ "~/.config/umbriel/noctalia.toml" ];
+    } parts;
   };
-
-  xdg.configFile."umbriel/cfg".source = ./config/umbriel/cfg;
 }

@@ -1,0 +1,10 @@
+{
+  output = {
+    eDP-1 = {
+      workspaces = [ "一" "二" "三" "四" "五" ];
+      workspace_axis = "horizontal";
+      scale = 1.0;
+      enabled = true;
+    };
+  };
+}

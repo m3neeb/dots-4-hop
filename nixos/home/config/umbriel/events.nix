@@ -1,0 +1,6 @@
+{
+  events = {
+    lid_close = "notify-send 'The laptop lid is closed'";
+    lid_open = "notify-send 'The laptop lid is open'";
+  };
+}
